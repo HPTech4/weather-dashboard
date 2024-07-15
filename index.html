@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Weather Dashboard</h1><br><br><br>
+    <div class="dashboard">
+        <input type="text" id="city" placeholder="Enter city name" width="150px" height="100">
+        <button onclick="getWeather()" id="btn">Get Weather</button>
+        <h2 id="location" class="main-box"></h2>
+
+        <div id="weather">
+
+            <div class="square">
+                <p class="box" id="temperature"> </p>
+                <img src="download (2).jpeg" alt="">
+            </div>
+            <div class="square1">
+                <p class="box" id="description"></p>
+            </div>
+            <div class="square2">
+                <p class="box" id="humidity"></p>
+            </div>
+            <div class="square3">
+                <p class="box" id="rain"></p> 
+            </div>
+            <div class="square4">
+                <p class="box" id="snow"></p>
+            </div>
+            <div class="square5">
+                <p class="box" id="windSpeed"></p>
+              
+            </div>
+            
+       
+        </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
