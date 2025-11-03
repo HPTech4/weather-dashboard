@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Weather Dashboard</h1>
+            <p class="tagline">Fast, clear and beautiful weather at a glance</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search">
+            <div class="search-box">
+                <i class="fa fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                <input id="city" type="text" placeholder="Search city, e.g. London" aria-label="City name">
+                <button id="btn" aria-label="Get weather">Get</button>
+                <button id="unit-toggle" class="unit-toggle" aria-pressed="false" title="Toggle °C/°F">°C</button>
+            </div>
+            <p id="message" class="message" aria-live="polite"></p>
+        </section>
+
+        <section id="weather" class="weather-grid" aria-live="polite">
+            <!-- Main card -->
+            <article class="card main-card">
+                <div class="main-top">
+                    <div class="main-left">
+                        <h2 id="location">—</h2>
+                        <p id="description">—</p>
+                    </div>
+                    <div class="main-right">
+                        <div id="temperature" class="temp">—</div>
+                        <div id="icon" class="weather-icon" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="metric"><i class="fa fa-tint"></i> <span id="humidity">—</span></div>
+                    <div class="metric"><i class="fa fa-wind"></i> <span id="windSpeed">—</span></div>
+                    <div class="metric"><i class="fa fa-cloud-showers-heavy"></i> <span id="rain">—</span></div>
+                    <div class="metric"><i class="fa fa-snowflake"></i> <span id="snow">—</span></div>
+                </div>
+            </article>
+
+            <!-- Small stat cards (optional) -->
+            <article class="card small-card">
+                <h3>Feels like</h3>
+                <p id="feels_like">—</p>
+            </article>
+
+            <article class="card small-card">
+                <h3>Pressure</h3>
+                <p id="pressure">—</p>
+            </article>
+
+            <article class="card small-card">
+                <h3>Visibility</h3>
+                <p id="visibility">—</p>
+            </article>
+
+        </section>
+
+        <!-- 5-day forecast -->
+        <section id="forecast-section" class="forecast-section">
+            <h2 class="forecast-title">5-Day Forecast</h2>
+            <div id="forecast" class="forecast-grid">
+                <!-- forecast cards injected here by script.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">Built with OpenWeather · Design updated</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
