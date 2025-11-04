@@ -56,8 +56,4 @@ The app currently contains an OpenWeather API key in `script.js` for convenience
 
 Use this project as you like — consider adding a license file if you plan to publish it.
 
----
-
-rename "C:\Users\WAREEZ\Documents\My-Project\Weather Dashoard" "Weather-Dashboard"
-
 
